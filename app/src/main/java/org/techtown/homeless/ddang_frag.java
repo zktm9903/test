@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
-
+//하하호호
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ddang_frag#newInstance} factory method to
@@ -89,7 +89,6 @@ public class ddang_frag extends Fragment implements View.OnClickListener {
                         mainActivity.update_now_money();
                     }
                 }
-
 
 
 
