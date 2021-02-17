@@ -9,7 +9,7 @@ public class Money {
     public int ddang_arr[] = new int[5];
 
     public Money(){
-        this.now_money = 100000;
+        this.now_money = 0;
         this.add_money = 1;
         this.level = 0;
         this.alba_money = 0;
