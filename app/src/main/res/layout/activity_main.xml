@@ -28,17 +28,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/won"
-                android:layout_width="196dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginTop="16dp"
-                android:text="0 WON"
-                android:textSize="40sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <ImageView
                 android:id="@+id/artist"
                 android:layout_width="80dp"
@@ -47,6 +36,58 @@
                 android:layout_marginBottom="224dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@android:drawable/screen_background_dark" />
+
+            <TextView
+                android:id="@+id/won"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="16dp"
+                android:text="0 WON"
+                android:textColor='@color/white'
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sec1"
+                android:layout_width="89dp"
+                android:layout_height="32dp"
+                android:text="0 WON/SEC"
+                android:textColor='@color/white'
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.452"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="0.043" />
+
+            <TextView
+                android:id="@+id/click1"
+                android:layout_width="98dp"
+                android:layout_height="36dp"
+                android:text="0 WON/Click"
+                android:textColor='@color/white'
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.876"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView"
+                app:layout_constraintVertical_bias="0.042" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>

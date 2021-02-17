@@ -15,11 +15,12 @@ import androidx.fragment.app.FragmentTransaction;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    TextView won;
+    TextView won, click1, sec1;
     LinearLayout layout1;
     Button beggar_power_btn , alba_btn, ddang_btn;
     int flag = 0;
     Money money;
+
     int alba_pic[] = new int[5];
     ImageView alba[] = new ImageView[5];
     FrameLayout frameLayout;
@@ -61,6 +62,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                     money.earn_alba_money();
                     update_now_money();
+                }
+            }
+        }
+
+        class sec_money_thread implements Runnable{
+            @Override
+            public void run(){
+                while(true){
+                    try{
+                        Thread.sleep(3000);
+                    }catch(Exception e){
+                        e.printStackTrace();
+                    }
+
                 }
             }
         }
