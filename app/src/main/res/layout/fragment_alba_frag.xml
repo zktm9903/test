@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:isScrollContainer="false">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#000000">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FF9800"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:src="@drawable/artist"/>
+
+            <TextView
+                android:id="@+id/alba_text1"
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:text="아티스트 Lv0"
+                android:textSize="30sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/alba_btn1"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="고용\n100 WON"
+                android:background="#2196F3"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FF9800"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:src="@drawable/beggar"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:text="사장거지 Lv0"
+                android:textSize="30sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/alba_btn2"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="고용"
+                android:background="#2196F3"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="#FF9800"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:src="@drawable/beggar"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:text="사장거지 Lv0"
+                android:textSize="30sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/alba_btn3"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="고용"
+                android:background="#2196F3"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="#FF9800"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:src="@drawable/beggar"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:text="사장거지 Lv0"
+                android:textSize="30sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/alba_btn4"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="고용"
+                android:background="#2196F3"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="10dp"
+            android:background="#FF9800"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:src="@drawable/beggar" />
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="사장거지 Lv0"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/alba_btn5"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="#2196F3"
+                android:text="고용"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="#FF9800"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:src="@drawable/beggar"/>
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="match_parent"
+                android:text="사장거지 Lv0"
+                android:textSize="30sp"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="#000000"/>
+
+            <Button
+                android:id="@+id/alba_btn6"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:text="고용"
+                android:background="#2196F3"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

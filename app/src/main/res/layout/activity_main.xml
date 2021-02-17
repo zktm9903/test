@@ -22,21 +22,31 @@
                 android:id="@+id/beggar"
                 android:layout_width="88dp"
                 android:layout_height="87dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginBottom="248dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="224dp"
                 android:src="@drawable/beggar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/won"
-                android:layout_width="73dp"
-                android:layout_height="23dp"
-                android:layout_marginStart="24dp"
+                android:layout_width="196dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="16dp"
                 android:text="0 WON"
+                android:textSize="40sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/artist"
+                android:layout_width="80dp"
+                android:layout_height="77dp"
+                android:layout_marginStart="164dp"
+                android:layout_marginBottom="224dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
@@ -45,8 +55,37 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"/>
+        android:layout_weight="1">
 
+        <Button
+            android:id="@+id/beggar_power_btn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left|top"
+            android:text="거지 파워"/>
+
+        <Button
+            android:id="@+id/alba_btn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|top"
+            android:text="알바 고용"/>
+
+        <Button
+            android:id="@+id/ddang_btn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right|top"
+            android:text="부동산"/>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"/>
 
 
 </LinearLayout>
