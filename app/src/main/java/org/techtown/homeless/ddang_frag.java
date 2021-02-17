@@ -28,6 +28,7 @@ public class ddang_frag extends Fragment implements View.OnClickListener {
     Button ddang_btn1;
     TextView ddang_text1;
     int ddang_medo_cost = 10000;
+    MainActivity mainActivity;
 
     public ddang_frag() {
         // Required empty public constructor
@@ -78,7 +79,7 @@ public class ddang_frag extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.ddang_btn1 :
-                MainActivity mainActivity = (MainActivity)getActivity();
+                 mainActivity = (MainActivity)getActivity();
 
                 if(mainActivity.money.have_ddang(1) == false){
                     if(mainActivity.money.get_now_money() >= ddang_medo_cost){
@@ -94,5 +95,8 @@ public class ddang_frag extends Fragment implements View.OnClickListener {
 
                 break;
         }
+    }
+    public void changetxtbtn(){
+        ddang_btn1.setText("판매: "+ mainActivity.money.get_ddang_money(1)+" WON");
     }
 }

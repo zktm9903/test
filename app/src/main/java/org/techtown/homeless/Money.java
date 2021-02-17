@@ -9,7 +9,7 @@ public class Money {
     public int ddang_arr[] = new int[5];
 
     public Money(){
-        this.now_money = 0;
+        this.now_money = 10000;
         this.add_money = 1;
         this.level = 0;
         this.alba_money = 0;
@@ -69,9 +69,9 @@ public class Money {
     }
 
     public void ddang_high(){
-        for(int i=0;i<5;i++){
-            if(ddang_arr[i] != 0)
-                ddang_arr[i] *= 2;
+        if(ddang_arr[0] != 0)
+        {
+            ddang_arr[0] *= 2;
         }
     }
 

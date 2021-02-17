@@ -67,37 +67,58 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         }
-
         alba_thread my_alba_thread = new alba_thread();
         Thread t = new Thread(my_alba_thread);
         t.start();
 
         ddang_frag mainFragment = (ddang_frag)getSupportFragmentManager().findFragmentById(R.id.frameLayout);
 
-
-        //부동산 쓰레드
         class ddang_thread implements Runnable{
-
             @Override
-            public void run() {
-                while (true) {
-
+            public void run()
+            {
+                while(true)
+                {
                     try {
-                        Thread.sleep(10000) ;
-                    } catch (Exception e) {
-                        e.printStackTrace() ;
+                       Thread.sleep(1000) ;
+                   } catch (Exception e) {
+                       e.printStackTrace() ;
                     }
                     money.ddang_high();
-                    update_now_money();
-                    if(money.have_ddang(1) == false)
-                        mainFragment.ddang_btn1.setText("판매: "+money.get_ddang_money(1)+" WON");
+                    if(money.have_ddang(1) == true)
+                        mainFragment.changetxtbtn();
                 }
             }
         }
-
-        alba_thread my_ddang_thread = new alba_thread();
+        ddang_thread my_ddang_thread = new ddang_thread();
         Thread d = new Thread(my_ddang_thread);
         d.start();
+
+//        ddang_frag mainFragment = (ddang_frag)getSupportFragmentManager().findFragmentById(R.id.frameLayout);
+//
+//
+//        //부동산 쓰레드
+//         class ddang_thread implements Runnable{
+//
+//            @Override
+//            public void run() {
+//                while (true) {
+//
+//                    try {
+//                        Thread.sleep(1000) ;
+//                    } catch (Exception e) {
+//                        e.printStackTrace() ;
+//                    }
+//                    money.ddang_high();
+
+//                }
+//            }
+//        }
+//
+//
+//        ddang_thread my_ddang_thread = new ddang_thread();
+//        Thread d = new Thread(my_ddang_thread);
+//        d.start();
     }
 
     @Override
