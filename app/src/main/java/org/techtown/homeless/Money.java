@@ -18,6 +18,9 @@ public class Money {
             alba_arr[i] = 0;
         }
     }
+    public int get_now_sec_money(){return this.alba_money;}
+
+    public int get_now_click_money(){return this.level;}
 
     public int get_now_money(){
         return this.now_money;

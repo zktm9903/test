@@ -79,7 +79,7 @@
                 android:id="@+id/click1"
                 android:layout_width="98dp"
                 android:layout_height="36dp"
-                android:text="0 WON/Click"
+                android:text="0 WON/CLICK"
                 android:textColor='@color/white'
                 android:textSize="15sp"
                 app:layout_constraintBottom_toBottomOf="parent"

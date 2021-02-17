@@ -56,26 +56,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 while (true) {
 
                     try {
-                        Thread.sleep(3000) ;
+                        Thread.sleep(10000) ;
                     } catch (Exception e) {
                         e.printStackTrace() ;
                     }
                     money.earn_alba_money();
                     update_now_money();
-                }
-            }
-        }
-
-        class sec_money_thread implements Runnable{
-            @Override
-            public void run(){
-                while(true){
-                    try{
-                        Thread.sleep(3000);
-                    }catch(Exception e){
-                        e.printStackTrace();
-                    }
-
+                    //update_now_sec_money();
+                    //update_now_click_money();
                 }
             }
         }
@@ -169,5 +157,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         alba[idx].setImageResource(alba_pic[idx]);
     }
 
+    public void update_now_sec_money(){sec1.setText(money.get_now_sec_money()+" WON/SEC");}
+
+    public void update_now_click_money(){click1.setText(money.get_now_click_money()+" WON/CLICK");}
 
 }
