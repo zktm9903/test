@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentManager = getSupportFragmentManager();
 
         view_find();
-
         //알바 쓰레드
         class alba_thread implements Runnable{
 
@@ -56,20 +55,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 while (true) {
 
                     try {
-                        Thread.sleep(10000) ;
+                        Thread.sleep(3000) ;
                     } catch (Exception e) {
                         e.printStackTrace() ;
                     }
                     money.earn_alba_money();
                     update_now_money();
-                    //update_now_sec_money();
-                    //update_now_click_money();
+                   // update_now_sec_money();
+                   // update_now_click_money();
                 }
             }
         }
-        alba_thread my_alba_thread = new alba_thread();
-        Thread t = new Thread(my_alba_thread);
-        t.start();
 
         ddang_frag mainFragment = (ddang_frag)getSupportFragmentManager().findFragmentById(R.id.frameLayout);
 
@@ -127,6 +123,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.layout1 :
                 money.now_money += money.add_money;
                 won.setText(money.now_money + " WON");
+                sec1.setText(money.alba_money+" WON/SEC");
+                click1.setText(money.level+" WON/CLICK");
                 break;
             case R.id.beggar_power_btn :
                 if(flag != 1){
@@ -154,6 +152,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void view_find(){
         won = (TextView) findViewById(R.id.won);
+        sec1 = (TextView) findViewById(R.id.sec1);
+        click1 = (TextView) findViewById(R.id.click1);
         layout1 = (LinearLayout) findViewById(R.id.layout1);
         beggar_power_btn = (Button) findViewById(R.id.beggar_power_btn);
         alba_btn = (Button) findViewById(R.id.alba_btn);
