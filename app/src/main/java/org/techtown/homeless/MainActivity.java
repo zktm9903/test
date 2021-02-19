@@ -1,6 +1,7 @@
 package org.techtown.homeless;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -67,7 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
 
-        ddang_frag mainFragment = (ddang_frag)getSupportFragmentManager().findFragmentById(R.id.frameLayout);
+        alba_thread my_alba_thread = new alba_thread();
+        Thread t = new Thread(my_alba_thread);
+        t.start();
+
 
         class ddang_thread implements Runnable{
             @Override
@@ -80,9 +84,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                    } catch (Exception e) {
                        e.printStackTrace() ;
                     }
+
                     money.ddang_high();
-                    if(money.have_ddang(1) == true)
-                        mainFragment.changetxtbtn();
+
+                    if(flag == 3){
+                        if(money.have_ddang(1) == true){
+
+                            runOnUiThread(new Runnable(){
+
+                                @Override
+                                public void run() {
+                                    ddang_frag mainFragment = (ddang_frag)getSupportFragmentManager().findFragmentById(R.id.frameLayout);
+                                    mainFragment.changetxtbtn();
+                                }
+                            });
+
+                        }
+
+                    }
+
                 }
             }
         }
@@ -124,7 +144,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 money.now_money += money.add_money;
                 won.setText(money.now_money + " WON");
                 sec1.setText(money.alba_money+" WON/SEC");
-                click1.setText(money.level+" WON/CLICK");
+                click1.setText(money.add_money+" WON/CLICK");
                 break;
             case R.id.beggar_power_btn :
                 if(flag != 1){

@@ -71,7 +71,8 @@ public class Money {
     public void ddang_high(){
         if(ddang_arr[0] != 0)
         {
-            ddang_arr[0] *= 2;
+            if(ddang_arr[0] != 10240000)
+                ddang_arr[0] *= 2;
         }
     }
 
