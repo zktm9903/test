@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int alba_pic[] = new int[5];
     ImageView alba[] = new ImageView[5];
     FrameLayout frameLayout;
+    public ddang_frag mainFragment;
 
     private FragmentManager fragmentManager;
     private power_frag fragment1;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //프래그먼트 매니저
         fragmentManager = getSupportFragmentManager();
+//        fragmentManager.beginTransaction().replace(R.id.frameLayout, new ddang_frag()).commit();
 
         view_find();
         //알바 쓰레드
@@ -56,14 +58,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 while (true) {
 
                     try {
-                        Thread.sleep(3000) ;
+                        Thread.sleep(1000) ;
+                    } catch (Exception e) {
+                        e.printStackTrace() ;
+                    }
+                    update_now_money();
+                    money.ddang_high();
+                    try {
+                        Thread.sleep(1000) ;
+                    } catch (Exception e) {
+                        e.printStackTrace() ;
+                    }
+                    update_now_money();
+                    money.ddang_high();
+                    try {
+                        Thread.sleep(1000) ;
                     } catch (Exception e) {
                         e.printStackTrace() ;
                     }
                     money.earn_alba_money();
                     update_now_money();
-                   // update_now_sec_money();
-                   // update_now_click_money();
                 }
             }
         }
@@ -79,14 +93,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             {
                 while(true)
                 {
-                    try {
-                       Thread.sleep(1000) ;
-                   } catch (Exception e) {
-                       e.printStackTrace() ;
-                    }
-
-                    money.ddang_high();
-
                     if(flag == 3){
                         if(money.have_ddang(1) == true){
 
@@ -102,6 +108,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
 
                     }
+                    try {
+                       Thread.sleep(500) ;
+                   } catch (Exception e) {
+                       e.printStackTrace() ;
+                    }
+
+
 
                 }
             }
@@ -110,31 +123,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Thread d = new Thread(my_ddang_thread);
         d.start();
 
-//        ddang_frag mainFragment = (ddang_frag)getSupportFragmentManager().findFragmentById(R.id.frameLayout);
-//
-//
-//        //부동산 쓰레드
-//         class ddang_thread implements Runnable{
-//
-//            @Override
-//            public void run() {
-//                while (true) {
-//
-//                    try {
-//                        Thread.sleep(1000) ;
-//                    } catch (Exception e) {
-//                        e.printStackTrace() ;
-//                    }
-//                    money.ddang_high();
 
-//                }
-//            }
-//        }
-//
-//
-//        ddang_thread my_ddang_thread = new ddang_thread();
-//        Thread d = new Thread(my_ddang_thread);
-//        d.start();
     }
 
     @Override
@@ -143,8 +132,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.layout1 :
                 money.now_money += money.add_money;
                 won.setText(money.now_money + " WON");
-                sec1.setText(money.alba_money+" WON/SEC");
-                click1.setText(money.add_money+" WON/CLICK");
                 break;
             case R.id.beggar_power_btn :
                 if(flag != 1){
@@ -192,6 +179,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void update_now_money(){
         won.setText(money.get_now_money() + " WON");
+        sec1.setText(money.alba_money+" WON/SEC");
+        click1.setText(money.add_money+" WON/CLICK");
     }
 
     public void update_now_alba(int idx){

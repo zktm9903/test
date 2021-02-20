@@ -129,7 +129,7 @@ public class power_frag extends Fragment implements View.OnClickListener {
 
 
                 }
-
+                mainActivity.update_now_money();
 
 
                 break;

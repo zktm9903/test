@@ -20,7 +20,7 @@ public class Money {
     }
     public int get_now_sec_money(){return this.alba_money;}
 
-    public int get_now_click_money(){return this.level;}
+    public int get_now_click_money(){return this.add_money;}
 
     public int get_now_money(){
         return this.now_money;
@@ -66,6 +66,11 @@ public class Money {
 
     public void ddang_mesu(int idx){
         ddang_arr[idx-1] += 10000;
+    }
+
+    public void ddang_medo(int idx){
+        now_money += ddang_arr[idx-1];
+        ddang_arr[idx-1]  = 0;
     }
 
     public void ddang_high(){

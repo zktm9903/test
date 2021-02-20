@@ -28,7 +28,7 @@ public class ddang_frag extends Fragment implements View.OnClickListener {
     Button ddang_btn1;
     TextView ddang_text1;
     int ddang_medo_cost = 10000;
-    MainActivity mainActivity;
+
 
     public ddang_frag() {
         // Required empty public constructor
@@ -72,6 +72,7 @@ public class ddang_frag extends Fragment implements View.OnClickListener {
 
         ddang_btn1.setOnClickListener(this);
 
+        changetxtbtn();
         return view;
     }
 
@@ -79,24 +80,30 @@ public class ddang_frag extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.ddang_btn1 :
-                 mainActivity = (MainActivity)getActivity();
+                 MainActivity mainActivity = (MainActivity)getActivity();
 
                 if(mainActivity.money.have_ddang(1) == false){
                     if(mainActivity.money.get_now_money() >= ddang_medo_cost){
                         mainActivity.money.spend_money(ddang_medo_cost);
                         mainActivity.money.ddang_mesu(1);
                         ddang_btn1.setText("판매: "+mainActivity.money.get_ddang_money(1)+" WON");
-
-                        mainActivity.update_now_money();
                     }
                 }
+                else{
+                    mainActivity.money.ddang_medo(1);
+                    ddang_btn1.setText("구입: "+ddang_medo_cost+" WON");
 
+                }
+                mainActivity.update_now_money();
 
 
                 break;
         }
     }
     public void changetxtbtn(){
-        ddang_btn1.setText("판매: "+ mainActivity.money.get_ddang_money(1)+" WON");
+        MainActivity mainActivity = (MainActivity)getActivity();
+
+        if(mainActivity.money.have_ddang(1) == true)
+            ddang_btn1.setText("판매: "+ mainActivity.money.get_ddang_money(1)+" WON");
     }
 }

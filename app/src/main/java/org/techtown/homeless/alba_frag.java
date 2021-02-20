@@ -97,6 +97,7 @@ public class alba_frag extends Fragment implements View.OnClickListener{
                     employ_alba_cost += 100;
                 }
 
+                mainActivity.update_now_money();
 
                 break;
             case R.id.beggar_power_btn :
